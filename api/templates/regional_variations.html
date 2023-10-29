@@ -11,20 +11,23 @@
 </head>
 <body>
     <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand nav-heading" href="">
+        <a class="navbar-brand nav-heading" href="/">
             <h5 class="ml-5">ICT 605 - Assignment 02</h5>
         </a>
-        </nav>
+    </nav>
     <div class="main mt-5 mb-5">
     <div class="container mt-5">
+        <div class="row">
+            <h5>Which regions experience most of the earthquakes?</h5>
+        </div>
         <div class="row">
             <div class="card-container col-md-4">
                 <a href="{{ url_for('regional_variations_map_1') }}" class="text-decoration-none text-dark">
                     <div class="card">
-                        <img src="{{ url_for('static', filename='images/image-9.png') }}" class="card-img-top" alt="...">
+                        <img src="{{ url_for('static', filename='images/regional-variation-image1.png') }}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title"></h5>
-                            <p class="card-text">Display of the tectonic plates</p>
+                            <p class="card-text">Where are the tectonic plate boundaries?</p>
                         </div>
                     </div>
                 </a>
@@ -32,10 +35,10 @@
             <div class="card-container col-md-4">
                 <a href="{{ url_for('regional_variations_map_2') }}" class="text-decoration-none text-dark">
                     <div class="card">
-                        <img src="{{ url_for('static', filename='images/image-10.png') }}" class="card-img-top" alt="...">
+                        <img src="{{ url_for('static', filename='images/regional-variation-image2.png') }}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title"></h5>
-                            <p class="card-text">Heatmap overlapping the tectonic plates borders. (The plate boundaries do coincide with the earthquakes in our data)</p>
+                            <p class="card-text">Does the earthquake occur near the tectonic boundaries?</p>
                         </div>
                     </div>
                 </a>
@@ -43,11 +46,10 @@
             <div class="card-container col-md-4">
                 <a href="{{ url_for('regional_variations_map_3') }}" class="text-decoration-none text-dark">
                     <div class="card">
-                        <img src="{{ url_for('static', filename='images/image-11.png') }}" class="card-img-top" alt="...">
+                        <img src="{{ url_for('static', filename='images/regional-variation-image3.png') }}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title"></h5>
-                            <p class="card-text">
-                              We can see that the magnitude distribution of earthquakes does not hold any association with plate boundaries. There does not appear to be any pattern and the magnitude is randomly distributed. We may discard any relation of the magnitude of earthquakes with plate location</p>
+                            <p class="card-text">Is there a pattern in between the magnitude and tectonic boundaries?</p>
                         </div>
                     </div>
                 </a>
@@ -58,10 +60,10 @@
              <div class="card-container col-md-4">
                 <a href="{{ url_for('regional_variations_map_4') }}" class="text-decoration-none text-dark">
                     <div class="card">
-                        <img src="{{ url_for('static', filename='images/image-12.png') }}" class="card-img-top" alt="...">
+                        <img src="{{ url_for('static', filename='images/regional-variation-image4.png') }}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title"></h5>
-                            <p class="card-text">We can see that the magnitude distribution of earthquakes does not hold any association with plate boundaries. There does not appear to be any pattern, and the magnitude is randomly distributed. We may discard any relation of the magnitude of earthquakes with plate location</p>
+                            <p class="card-text">Is there a pattern in between the depth and tectonic boundaries?</p>
                         </div>
                     </div>
                 </a>
@@ -69,10 +71,10 @@
             <div class="card-container col-md-4">
                 <a href="{{ url_for('regional_variations_map_5') }}" class="text-decoration-none text-dark">
                     <div class="card">
-                        <img src="{{ url_for('static', filename='images/image-9.png') }}" class="card-img-top" alt="...">
+                        <img src="{{ url_for('static', filename='images/regional-variation-image5.png') }}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title"></h5>
-                            <p class="card-text">Display of the tectonic plates</p>
+                            <p class="card-text">How about Australia?</p>
                         </div>
                     </div>
                 </a>
@@ -80,10 +82,10 @@
             <div class="card-container col-md-4">
                 <a href="{{ url_for('regional_variations_map_6') }}" class="text-decoration-none text-dark">
                     <div class="card">
-                        <img src="{{ url_for('static', filename='images/image-10.png') }}" class="card-img-top" alt="...">
+                        <img src="{{ url_for('static', filename='images/regional-variation-image6.png') }}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title"></h5>
-                            <p class="card-text">Heatmap overlapping the tectonic plates borders. (The plate boundaries do coincide with the earthquakes in our data)</p>
+                            <p class="card-text">How about globally?</p>
                         </div>
                     </div>
                 </a>

@@ -15,16 +15,29 @@
         <a class="navbar-brand nav-heading" href="#">
             <h5 class="ml-5">ICT 605 - Assignment 02</h5>
         </a>
-        </nav>
+    </nav>
     <div class="main mt-5 mb-5">
 
     <div class="container mt-5">
         <div class="row">
             <div class="card-container col-md-3">
+                <a href="{{ url_for('regional_variations') }}" class="text-decoration-none text-dark">
+                    <div class="card">
+                        <div class="card-header bg-secondary text-white">Regional Variations</div>
+                        <img src="{{ url_for('static', filename='images/regional-variation.png') }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title"></h5>
+                            <p class="card-text fw-bold">Which regions experience most of the earthquakes?</p>
+                             <p class="text-muted small">Specific regions, such as Australia, might exhibit unique patterns and characteristics in their seismic activities.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="card-container col-md-3">
                 <a href="{{ url_for('spatial_concerntration') }}" class="text-decoration-none text-dark">
                     <div class="card">
                         <div class="card-header bg-secondary text-white">Spatial Concerntration</div>
-                        <img src="{{ url_for('static', filename='images/image-1.png') }}" class="card-img-top" alt="...">
+                        <img src="{{ url_for('static', filename='images/spatial-concentration.png') }}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title"></h5>
                             <p class="card-text fw-bold">Where do earthquakes occur most frequently? </p>
@@ -37,7 +50,7 @@
                 <a href="{{ url_for('temporal_fluctuations') }}" class="text-decoration-none text-dark">
                     <div class="card">
                         <div class="card-header bg-secondary text-white">Temporal Fluctuations</div>
-                        <img src="{{ url_for('static', filename='images/image-2.png') }}" class="card-img-top" alt="...">
+                        <img src="{{ url_for('static', filename='images/temporal-fluctuation.png') }}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title"></h5>
                             <p class="card-text fw-bold">
@@ -54,7 +67,7 @@
                 <a href="{{ url_for('depth_magnitude_relationship') }}" class="text-decoration-none text-dark">
                     <div class="card">
                         <div class="card-header bg-secondary text-white">Depth-Magnitude Relationship</div>
-                        <img src="{{ url_for('static', filename='images/image-5.png') }}" class="card-img-top" alt="...">
+                        <img src="{{ url_for('static', filename='images/depth-magnitude.png') }}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title"></h5>
                             <p class="card-text fw-bold">
@@ -65,19 +78,7 @@
                     </div>
                 </a>
             </div>
-             <div class="card-container col-md-3">
-                <a href="{{ url_for('regional_variations') }}" class="text-decoration-none text-dark">
-                    <div class="card">
-                        <div class="card-header bg-secondary text-white">Regional Variations</div>
-                        <img src="{{ url_for('static', filename='images/image-7.png') }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title"></h5>
-                            <p class="card-text fw-bold">Which regions experience most of the earthquakes?</p>
-                             <p class="text-muted small">Specific regions, such as Australia, might exhibit unique patterns and characteristics in their seismic activities.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
+            
         </div>
 
     </div>
