@@ -1,12 +1,10 @@
 from flask import Flask, render_template, request
-from dotenv import load_dotenv
 from datetime import datetime
 from utils import fetch_earthquake_data
 import requests
 import folium
 
 app = Flask(__name__)
-load_dotenv()
 
 @app.route('/')
 def home():
