@@ -1,8 +1,4 @@
-from flask import Flask, render_template, request
-from datetime import datetime
-from utils import fetch_earthquake_data
-import requests
-import folium
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
