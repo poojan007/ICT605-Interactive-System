@@ -24,7 +24,6 @@ def spatial_concerntration_map_4():
     return render_template('spatial_concerntration_4_Map_4.html')
 
 
-
 @app.route('/temporal_fluctuations')
 def temporal_fluctuations():
     return render_template('temporal_fluctuations.html')

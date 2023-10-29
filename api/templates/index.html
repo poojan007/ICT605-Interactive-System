@@ -2,89 +2,1010 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ICT605 Major Assignment 2</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        crossorigin="anonymous">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ICT605 Major Assignment 2</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+            crossorigin="anonymous">
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Custom Google font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
 <body>
-    <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand nav-heading" href="#">
-            <h5 class="ml-5">ICT 605 - Assignment 02</h5>
-        </a>
-    </nav>
-    <div class="main mt-5 mb-5">
+    
+        <main class="flex-shrink-0">
+            <!-- Navigation-->
+            <nav class="navbar navbar-dark bg-dark py-3">
+                <div class="container px-5">
+                    <a class="navbar-brand" href=""><span class="fw-bolder">ICT605 Major Assignment 2</span></a>
+                </div>
+            </nav>
+            <!-- Page Content-->
+            <div class="container px-5 my-5">
+                <!-- Centered Pills -->
+                <ul class="nav nav-pills justify-content-center mb-3 mt-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="interactive-tab" data-bs-toggle="pill" href="#interactive">Interactive Visuals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="builders-tab" data-bs-toggle="pill" href="#builders">Story</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="student-tab" data-bs-toggle="pill" href="#student">Explore</a>
+                    </li>
+                </ul>
 
-    <div class="container mt-5">
-        <div class="row">
-            <div class="card-container col-md-3">
-                <a href="{{ url_for('regional_variations') }}" class="text-decoration-none text-dark">
-                    <div class="card">
-                        <div class="card-header bg-secondary text-white">Regional Variations</div>
-                        <img src="{{ url_for('static', filename='images/regional-variation.png') }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title"></h5>
-                            <p class="card-text fw-bold">Which regions experience most of the earthquakes?</p>
-                             <p class="text-muted small">Specific regions, such as Australia, might exhibit unique patterns and characteristics in their seismic activities.</p>
+                <div class="tab-content">
+                    <!-- Builders Content -->
+                    <a id="top"></a>
+                     
+                    <div class="tab-pane fade show active" id="interactive">
+                         <div class="text-center mb-5">
+                            <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Earthquake's Interactive Visualizations</span></h1>
+                        </div>
+                        <div class="main mt-5 mb-5">
+                            <div class="container mt-5">
+                                <div class="row">
+                                    <div class="card-container col-md-3">
+                                        <a href="{{ url_for('regional_variations') }}" class="text-decoration-none text-dark">
+                                            <div class="card">
+                                                <div class="card-header bg-secondary text-white">Regional Variations</div>
+                                                <img src="{{ url_for('static', filename='images/regional-variation.png') }}" class="card-img-top" alt="...">
+                                                <div class="card-body">
+                                                    <h5 class="card-title"></h5>
+                                                    <p class="card-text fw-bold">Which regions experience most of the earthquakes?</p>
+                                                    <p class="text-muted small">Specific regions, such as Australia, might exhibit unique patterns and characteristics in their seismic activities.</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="card-container col-md-3">
+                                        <a href="{{ url_for('spatial_concerntration') }}" class="text-decoration-none text-dark">
+                                            <div class="card">
+                                                <div class="card-header bg-secondary text-white">Spatial Concerntration</div>
+                                                <img src="{{ url_for('static', filename='images/spatial-concentration.png') }}" class="card-img-top" alt="...">
+                                                <div class="card-body">
+                                                    <h5 class="card-title"></h5>
+                                                    <p class="card-text fw-bold">Where do earthquakes occur most frequently? </p>
+                                                    <p class="small text-muted text-justify">There is an expected higher prevalence and intensity of earthquakes near tectonic plate boundaries, especially in regions like the Pacific Ring of Fire </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="card-container col-md-3">
+                                        <a href="{{ url_for('temporal_fluctuations') }}" class="text-decoration-none text-dark">
+                                            <div class="card">
+                                                <div class="card-header bg-secondary text-white">Temporal Fluctuations</div>
+                                                <img src="{{ url_for('static', filename='images/temporal-fluctuation.png') }}" class="card-img-top" alt="...">
+                                                <div class="card-body">
+                                                    <h5 class="card-title"></h5>
+                                                    <p class="card-text fw-bold">
+                                                        Is there a seasonal or yearly pattern to the occurrence of earthquakes? 
+                                                    </p>
+                                                    <p class="text-muted small">
+                                                        Patterns or trends in earthquake occurrences and magnitudes may be identifiable over time, providing insights into seismic behaviors.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="card-container col-md-3">
+                                        <a href="{{ url_for('depth_magnitude_relationship') }}" class="text-decoration-none text-dark">
+                                            <div class="card">
+                                                <div class="card-header bg-secondary text-white">Depth-Magnitude Relationship</div>
+                                                <img src="{{ url_for('static', filename='images/depth-magnitude.png') }}" class="card-img-top" alt="...">
+                                                <div class="card-body">
+                                                    <h5 class="card-title"></h5>
+                                                    <p class="card-text fw-bold">
+                                                        Does magnitude have a relationship to the depth of earthquake? 
+                                                    </p>
+                                                    <p class="small text-muted">A potential correlation exists between the depth and magnitude of earthquakes, which could play a role in their impact and frequency.</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    
+                                </div>
+
+                            </div>
                         </div>
                     </div>
-                </a>
-            </div>
-            <div class="card-container col-md-3">
-                <a href="{{ url_for('spatial_concerntration') }}" class="text-decoration-none text-dark">
-                    <div class="card">
-                        <div class="card-header bg-secondary text-white">Spatial Concerntration</div>
-                        <img src="{{ url_for('static', filename='images/spatial-concentration.png') }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title"></h5>
-                            <p class="card-text fw-bold">Where do earthquakes occur most frequently? </p>
-                            <p class="small text-muted text-justify">There is an expected higher prevalence and intensity of earthquakes near tectonic plate boundaries, especially in regions like the Pacific Ring of Fire </p>
+                    
+                    <div class="tab-pane fade" id="builders">
+                          <div class="text-center mb-5">
+                            <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Shaking Earth: Understanding & Anticipating Nature's Tremors</span></h1>
                         </div>
-                    </div>
-                </a>
-            </div>
-            <div class="card-container col-md-3">
-                <a href="{{ url_for('temporal_fluctuations') }}" class="text-decoration-none text-dark">
-                    <div class="card">
-                        <div class="card-header bg-secondary text-white">Temporal Fluctuations</div>
-                        <img src="{{ url_for('static', filename='images/temporal-fluctuation.png') }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title"></h5>
-                            <p class="card-text fw-bold">
-                                Is there a seasonal or yearly pattern to the occurrence of earthquakes? 
-                            </p>
-                            <p class="text-muted small">
-                                Patterns or trends in earthquake occurrences and magnitudes may be identifiable over time, providing insights into seismic behaviors.
-                            </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="card-container col-md-3">
-                <a href="{{ url_for('depth_magnitude_relationship') }}" class="text-decoration-none text-dark">
-                    <div class="card">
-                        <div class="card-header bg-secondary text-white">Depth-Magnitude Relationship</div>
-                        <img src="{{ url_for('static', filename='images/depth-magnitude.png') }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title"></h5>
-                            <p class="card-text fw-bold">
-                                Does magnitude have a relationship to the depth of earthquake? 
-                            </p>
-                            <p class="small text-muted">A potential correlation exists between the depth and magnitude of earthquakes, which could play a role in their impact and frequency.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
+                        <!-- Your content for the Builders tab goes here -->
+                       
+                        <div class="row gx-5 justify-content-center">
+                             <div class="col-lg-11 col-xl-9 col-xxl-8">
+                                <!-- Section 1 -->
+                                <section>
+                                    <div class="d-flex align-items-center justify-content-between mb-4">
+                                        <h2 class="text-primary fw-bolder mb-0">The impact of earthquakes</h2>
+                                    </div>
+                                    <!-- carousel -->
+                                    <div class="container-card">
+                                        <div class="fixed-info">
+                                            <a class="btn btn-primary info-content" 
+                                            target="_blank"
+                                            href="https://www.9news.com.au/world/before-after-photos-of-turkey-earthquake-devastation/a0c017b1-82e2-4492-94b4-7b935dd1296d#8">Learn More</a>
+                                        </div> 
+                                        <div class="card shadow border-0 rounded-4 mb-5">
+                                            <div class="card-body p-5">
+                                                <div class="row align-items-center gx-5">
+                                                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                                                            <div class="carousel-inner">
+                                                                <div class="carousel-item active">
+                                                                    <img src="https://imageresizer.static9.net.au/VR7Rv-n_0CdaogrnUK8R1ONMO3g=/373x167:1794x965/1200x0/filters:contrast(7):saturation(1.22)/https%3A%2F%2Fprod.static9.net.au%2Ffs%2F741e6003-2b6e-477f-afdd-e109fd7e01e6" class="d-block w-100" alt="...">
+                                                                    <div class="carousel-caption d-none d-md-block">
+                                                                        <h2><b>Before</b></h2>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="carousel-item">
+                                                                    <img src="https://imageresizer.static9.net.au/Ktegr0R_nDvMlPwm6Vpbxtssr2E=/0x43:1024x619/1200x0/filters:contrast(5):saturation(1.3)/https%3A%2F%2Fprod.static9.net.au%2Ffs%2F95f5530e-7714-4519-a74d-235a7a399bfe" class="d-block w-100" alt="...">
+                                                                    <div class="carousel-caption d-none d-md-block">
+                                                                        <h2><b>After</b></h2>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="carousel-item active">
+                                                                    <img src="https://imageresizer.static9.net.au/ww6aJ7IklCb87-39sD7HJUa9CjQ=/145x233:1946x1246/1200x0/filters:contrast(5):saturation(1.22)/https%3A%2F%2Fprod.static9.net.au%2Ffs%2F2020595c-3428-450b-b120-3bb15b917ec7" class="d-block w-100" alt="...">
+                                                                    <div class="carousel-caption d-none d-md-block">
+                                                                        <h2><b>Before</b></h2>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="carousel-item">
+                                                                    <img src="https://imageresizer.static9.net.au/IKRhuQAHuZM9rJtO_-TyKskKejM=/0x1:2048x1153/1200x0/filters:contrast(4):saturation(1.42)/https%3A%2F%2Fprod.static9.net.au%2Ffs%2F8c9737cd-5e34-47d6-af1b-6abf1ae3e4e8" class="d-block w-100" alt="...">
+                                                                    <div class="carousel-caption d-none d-md-block">
+                                                                        <h2><b>After</b></h2>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="carousel-item active">
+                                                                    <img src="https://imageresizer.static9.net.au/PAOfNJtczaA6KwGKvW69ERT07mM=/1200x0/https%3A%2F%2Fprod.static9.net.au%2Ffs%2F32691a1c-e0ba-441b-b7d8-26d0186393d4" class="d-block w-100" alt="...">
+                                                                    <div class="carousel-caption d-none d-md-block">
+                                                                        <h2><b>Before</b></h2>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="carousel-item">
+                                                                    <img src="https://imageresizer.static9.net.au/U-girwfuTMb9k1AxEv_sl6pDrQ0=/1200x0/https%3A%2F%2Fprod.static9.net.au%2Ffs%2Fbfc1998e-fdc6-4fd6-83d6-4639abc91296" class="d-block w-100" alt="...">
+                                                                    <div class="carousel-caption d-none d-md-block">
+                                                                        <h2><b>After</b></h2>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                            
+                                                            </div>
+                                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                                <span class="visually-hidden">Previous</span>
+                                                            </button>
+                                                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                                <span class="visually-hidden">Next</span>
+                                                            </button>
+                                                    </div>
+                                            
+                                            
+                                                        <div class=" mt-5" style="text-align: justify;"> 
+                                                            <p>
+                                                               <strong class="fs-5">O</strong>n <strong>6 February 2023</strong>, at 04:17 TRT (01:17 UTC), a <strong>Mw 7.8 </strong> earthquake struck southern and central <strong>  Turkey and northern and western Syria.</strong> The epicenter was 37 km (23 mi) west–northwest of GaziantepTurkey is situated in a seismically active zone and has experienced numerous significant earthquakes throughout its history. Earthquakes have had profound impacts on its infrastructure, society, and culture. 
+                                                            Here's a general "Before and After" breakdown concerning the effects of a significant earthquake in Turkey:
+                                                            </p>
+                                                            <div class="collapse" id="extraContent">
+                                                                    <div class="p-4 rounded-4">
+                                                                        <img class="img-fluid" src="{{ url_for('static', filename='images/news.png') }}">
+                                                                    </div>
+                                                                    <div style="text-align: justify;">
+                                                                        <p >
+                                                                            There was widespread damage in an area of about 
+                                                                            <strong>350,000 km2 (140,000 sq mi)</strong>, about the size of Germany.
+                                                                            An estimated 14 million people, or 16 percent of Turkey's population, were affected.
+                                                                            Development experts from the United Nations estimated that about 1.5 million people were left homeless
+                                                                        </p>
+                                                                    </div>
+                                                                    
+                                                                    <div class="row  gx-5">
+                                                                        <div class="col-lg-6">
+                                                                            <p class="fw-bold">Before the Earthquake</p>
+                                                                            <ol>
+                                                                                <li> <strong>Infrastructure:</strong> Many older buildings, especially in urban areas, were not built to modern earthquake-resistant standards.</li>
+                                                                                <li> <strong>Public Awareness:</strong> While there was awareness about the country's seismic activity, an earthquake's immediacy and personal impact might not have been at the forefront of everyone's minds.</li>
+                                                                                <li> <strong>Preparedness:</strong> There might have been varying levels of disaster preparedness plans and equipment in place, but not universally adhered to or regularly updated.</li>
+                                                                                <li> <strong>Economy:</strong> Depending on the region, economic activities would be running as usual, with potential vulnerabilities not yet exposed.</li>
+                                                                            </ol>
+                                                                        </div>
+                                                                        <div class="col-lg-6">
+                                                                            <p class="fw-bold">After the Earthquake</p>
+                                                                            <ol>
+                                                                                <li><strong>Infrastructure Damage:</strong> Significant damage to buildings, roads, bridges, and other infrastructure. Historical sites or older buildings might have been particularly affected.</li>
+                                                                                <li><strong>Humanitarian Impact:</strong> Tragically, there would be a loss of life and many injuries. Displacement of people due to loss of homes, leading to temporary shelters or camps.</li>
+                                                                                <li><strong>Increased Awareness: </strong>A heightened public and governmental focus on earthquake readiness, safety measures, and infrastructure improvements.</li>
+                                                                                <li><strong>Recovery &amp; Rehabilitation:</strong> Major efforts towards rebuilding and restoring affected regions, often with international aid and support. There might also be an influx of NGOs and international bodies to assist in immediate relief and long-term recovery</li>
+                                                                                <li><strong>Economic Impact:</strong> Disruptions in local and, possibly, national economies due to infrastructure damages, business losses, and the costs associated with rebuilding and rehabilitation.</li>
+                                                                            </ol>
+                                                                        </div>
+                                                                    </div>
+                                                            </div>
+                                                        
+                                                            <a class="btn btn-primary mt-2 collapsed" 
+                                                                data-bs-toggle="collapse" href="#extraContent" role="button" aria-expanded="false" aria-controls="extraContent" id="toggleBtn"></a>
+                                                        </div>
+        
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </section>
+
+                                <section>
+                                    <div class="d-flex align-items-center justify-content-between mb-4">
+                                        <h2 class="text-secondary fw-bolder mb-0">The Power of earthquake</h2>
+                                    </div>
+                                     <div class="container-card">
+                                        <div class="fixed-info">
+                                            <a class="btn btn-primary info-content"
+                                            target="_blank"
+                                             href="https://science.howstuffworks.com/environmental/energy/energy-hurricane-volcano-earthquake3.htm#:~:text=A%20magnitude%204.0%20earthquake%20is,tons%2C%208.0%20is%206%2C270%2C000%20tons%2C">Learn more</a>
+                                        </div> 
+                                        <div class="card shadow border-0 rounded-4 mb-5">
+                                            <div class="card-body p-5">
+                                                <div class="col text-center text-lg-start mb-8 mb-lg-0">
+                                                        <div class="p-4 rounded-4">
+                                                            <img class="img-fluid" src="{{ url_for('static', filename='images/earthquake_figure.png') }}">
+                                                        </div>
+                                                        <div class="mt-5" style="text-align: justify;">
+                                                            <p>
+                                                                <strong class="fs-5">E</strong>arthquakes are more than mere geological occurrences; 
+                                                                they are intrinsic to our dynamic planet's essence. 
+                                                                Over eons, they have sculpted Earth's history and topography.
+                                                                Picture a world where the ground beneath us is in perpetual motion, where seismic events are timeless storytellers, etching tales far older than humanity. 
+                                                                </p>
+                                                                <p>To underscore their significance, 
+                                                                we turn to a striking visual - <span class="fw-bold"> A World Heatmap displaying earthquake activities </span>.
+                                                                This map vividly showcases their global reach, underscoring their universal impact on our planet. 
+                                                                These seismic events transcend borders, a testament to their role in shaping our world. 
+                                                            </p>
             
-        </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
 
-    </div>
-</div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+                                 <!-- Intensity and Frequency -->
+                                <section>
+                                    <div class="d-flex align-items-center justify-content-between mb-4">
+                                        <h2 class="text-primary fw-bolder mb-0"> Intensity and Frequency</h2>
+                                    </div>
+                                    <div class="container-card">
+                                        <div class="fixed-info">
+                                            <a class="btn btn-primary info-content"
+                                            target="_blank"
+                                             href="https://www.usgs.gov/programs/earthquake-hazards/earthquake-magnitude-energy-release-and-shaking-intensity">Learn more</a>
+                                        </div> 
+                                        <div class="card shadow border-0 rounded-4 mb-5">
+                                            <div class="card-body p-5">
+                                                <div class="col text-center text-lg-start mb-8 mb-lg-0">
+                                                        <div class="p-4 rounded-4">
+                                                            <img class="img-fluid" src="{{ url_for('static', filename='images/magnitude distribution histogram.jpg') }}">
+                                                        </div>
+                                                        <div class="mt-5" style="text-align: justify;">
+                                                            <p>
+                                                                    <strong class="fs-5">B</strong>eyond their dramatic headlines, it's the smaller,
+                                                                 more frequent tremors that complete Earth's seismic portrait. 
+                                                                 While major earthquakes capture our awe, these daily,
+                                                                 less conspicuous tremors are the silent chroniclers of our planet's seismic story
+                                                                </p>
+                                                                <p>
+                                                                    <strong>The Magnitude Distribution Histogram </strong>— a graph that unveils the spectrum of earthquake magnitudes. 
+                                                                    Towering spikes represent significant quakes, but it's the broader, lower peaks representing smaller tremors that dominate the chart. These everyday events paint a vibrant picture of continuous seismic activity beneath our feet. 
+                                                                </p>
+                                                               
+                                                                <div class="collapse" id="extraIntensifyContent">
+                                                                    <p>
+                                                                     Yet, their significance extends beyond numbers.These smaller tremors silently record subtle shifts in Earth's crust. 
+                                                                     Scientists decode these unassuming events, gaining insights into the intricate geological processes shaping our world.
+                                                                     These quakes are the unsung heroes of earthquake science, vital in our quest to grasp Earth's seismic reality. 
+                                                                     </p>
+                                                                </div>
+                                                                <a class="btn btn-primary mt-2 collapsed"
+                                                                data-bs-toggle="collapse" href="#extraIntensifyContent" role="button" aria-expanded="false" aria-controls="extraContent" id="toggleBtn">
+                                                                </a>
+                                                            </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <!-- intensify end -->
+                                <!-- tectonic -->
+                                <section>
+                                    <div class="d-flex align-items-center justify-content-between mb-4">
+                                        <h2 class="text-secondary fw-bolder mb-0"> Tectonic Foundations</h2>
+                                    </div>
+                                    <div class="container-card">
+                                        <div class="fixed-info">
+                                            <a class="btn btn-primary info-content"
+                                            target="_blank"
+                                              href="https://www.usgs.gov/faqs/what-earthquake-and-what-causes-them-happen#:~:text=The%20tectonic%20plates%20are%20always,the%20shaking%20that%20we%20feel">Learn more</a>
+                                        </div> 
+                                        <div class="card shadow border-0 rounded-4 mb-5">
+                                            <div class="card-body p-5">
+                                                <div class="col text-center text-lg-start mb-8 mb-lg-0">
+                                                        
+                                                        <div style="text-align: justify;">
+                                                                <p>
+                                                                    <strong class="fs-5">E</strong>arth's dynamism arises from the intricate dance of tectonic plates, a fundamental aspect often overlooked. These colossal, ever-moving pieces of the Earth's crust are the underpinning of our planet's constant transformation. 
+
+                                                                </p>                                                                
+                                                                <p>Imagine Earth as a giant jigsaw puzzle, with tectonic plates serving as its puzzle pieces. These massive plates, ranging from the Pacific Plate to the African Plate,
+                                                                     collectively form Earth's surface. It's along their edges, where they interact and collide, that seismic drama unfolds </p>
+                                                                <p>
+                                                                    <strong>Visualize this Tectonic plate boundaries overlay </strong>—a map highlighting these dynamic zones. It showcases the intricate dance of the Earth's plates, revealing regions where they pull apart (divergent boundaries), push together (convergent boundaries), or slide past one another (transform limitations). Each of these boundary types is a potential hotbed for seismic activity. 
+                                                                </p>
+
+                                                                <div class="p-4 rounded-4">
+                                                                    <img class="img-fluid" src="{{ url_for('static', filename='images/tectonic.jpg') }}">
+                                                                </div>
+                                                               
+                                                                <div class="collapse" id="extraTectonicContent">
+                                                                    <p>
+                                                                     These plate boundaries are the birthplaces of many earthquakes, as the tremendous forces at play create stresses and pressures that, when released, result in seismic events. Subduction zones, where one plate is forced beneath another, can produce the most powerful quakes on Earth. Transform boundaries, where plates slide past each other, can also generate significant tremors. Even divergent boundaries, where plates move apart, can lead to volcanic activity and earthquakes. 
+                                                                     </p>
+                                                                </div>
+                                                                <a class="btn btn-primary mt-4 collapsed"
+                                                                data-bs-toggle="collapse" href="#extraTectonicContent" role="button" aria-expanded="false" aria-controls="extraContent" id="toggleBtn">
+                                                                </a>
+                                                            </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <!-- tectonic-end -->
+                                <!-- scatter plot -->
+                                <section>
+                                    <div class="d-flex align-items-center justify-content-between mb-4">
+                                        <h2 class="text-primary fw-bolder mb-0">The Connection of Depth and Magnitude</h2>
+                                    </div>
+                                   <div class="container-card">
+                                        <div class="fixed-info">
+                                            <a class="btn btn-primary info-content"
+                                            target="_blank"
+                                             href="https://www.usgs.gov/faqs/what-depth-do-earthquakes-occur-what-significance-depth">Learn more</a>
+                                        </div> 
+                                        <div class="card shadow border-0 rounded-4 mb-5">
+                                            <div class="card-body p-5">
+                                                <div class="col text-center text-lg-start mb-8 mb-lg-0">
+                                                           <div  style="text-align: justify;">
+                                                            <p>
+                                                                <strong class="fs-5">I</strong>n the realm of earthquakes, their characteristics are not uniform. A key factor influencing their power is the depth at which they originate within the Earth's crust. 
+                                                            </p> 
+                                                            <p>
+                                                                   <strong>Consider these Earthquake Depth vs. Magnitude Scatter Plot </strong>— A graph showing that shallow earthquakes tend to have lower magnitudes, while deeper ones often exhibit higher magnitudes. This depth-magnitude relationship is a crucial aspect of earthquake science. 
+                                                            </p>
+
+                                                            <!-- carousel -->
+                                                              <div id="carouselConnectionExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                                                                            <div class="carousel-inner">
+                                                                                <div class="carousel-item active">
+                                                                                    <img src="{{ url_for('static', filename='images/mag_by_depth.jpg') }}" class="d-block w-100" alt="...">
+                                                                                    <div class="carousel-caption d-none d-md-block">
+                                                                                        
+                                                                                        <span class="small text-muted">Enhancing the visualization with the Hue element.</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="carousel-item">
+                                                                                    <img src="{{ url_for('static', filename='images/mag_by_depth2.jpg') }}" class="d-block w-100" alt="...">
+                                                                                    <div class="carousel-caption d-none d-md-block">
+                                                                                        
+                                                                                        <span class="small text-muted"> Earthquake Depth Vs Magnitude  </span>
+                                                                                    </div>
+                                                                                </div>
+                                                                              
+                                                                            </div>
+                                                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselConnectionExampleControls" data-bs-slide="prev">
+                                                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                                                <span class="visually-hidden">Previous</span>
+                                                                            </button>
+                                                                            <button class="carousel-control-next" type="button" data-bs-target="#carouselConnectionExampleControls" data-bs-slide="next">
+                                                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                                                <span class="visually-hidden">Next</span>
+                                                                            </button>
+                                                                    </div>
+                                                            <!-- carousel end -->
+                                                            <p>
+                                                                <strong class="fs-5">D</strong>eeper within the Earth's crust, 
+                                                                increasing pressures and stresses accumulate over time. When an earthquake occurs at these depths, it can release a greater amount of energy,
+                                                                resulting in more significant seismic events. This connection between depth and magnitude is essential for predicting earthquake potential and preparing for their impact   
+                                                            </p>
+                                                               
+                                                            </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <!-- scatter plot end  -->
+                                <!-- human quest  -->
+                                <section>
+                                    <div class="d-flex align-items-center justify-content-between mb-4">
+                                        <h2 class="text-secondary fw-bolder mb-0">
+                                            The Human Quest: Predicting the Unpredictable
+                                        </h2>
+                                    </div>
+                                    <div class="card shadow border-0 rounded-4 mb-5">
+                                        <div class="card-body p-5">
+                                            <div class="p-4 rounded-4">
+                                                <img class="img-fluid" src="{{ url_for('static', filename='images/timeline.jpg') }}">
+                                            </div>
+                                            <div  style="text-align: justify;">
+                                                <p>
+                                                    <strong class="fs-5">H</strong>umanity has always exhibited an unbreakable spirit, continually attempting to comprehend the mysterious and control the untamed forces of nature. The field of earthquake early warning systems has made incredible advancements because of this unrelenting search of information. 
+                                                    The visualisation in above depicts the timeline of early warning systems, showing the development from simple techniques to cutting-edge technologies. We have made great progress in anticipating the unexpected, from Japan’s cutting-edge systems to California’s pioneering efforts 
+                                                </p>
+
+                                                <div class="collapse" id="extraHumanContent">
+                                                     <div class="p-4 rounded-4">
+                                                        <img class="img-fluid" src="{{ url_for('static', filename='images/shakealert.jpg')}}"/>
+                                                    </div>
+                                                   <p>
+                                                    These stories of growth and innovation demonstrate the progression of technology and the resilience of communities and nations in the face of imminent disaster. Early warning systems are not simply the outcome of individual genius;
+                                                     they are the consequence of collaborative efforts to turn the unpredictable into the predictable. 
+                                                    </p>
+                                                    <p> By looking into these experiences, we learn that earthquake prediction is not a faraway dream, but rather a living reality that is constantly evolving.
+                                                     It demonstrates our ability to turn possible disasters into stories of preparedness, offering hope for a future in which we can mitigate the impact of seismic events and protect lives and livelihoods. 
+                                                   </p>             
+                                                </div>
+                                                <a class="btn btn-primary mt-2 collapsed"
+                                                            data-bs-toggle="collapse" href="#extraHumanContent" role="button" aria-expanded="false" aria-controls="extraContent" id="toggleBtn">
+                                                                
+                                                </a>
+                                            </div>
+                                        </div>
+                                        </div>
+                                </section>
+                                 <!-- human quest end   -->
+                                 <!-- The Real Impact: Testimonies and Stories -->
+                                <section>
+                                     <div class="card shadow border-0 rounded-4 mb-5">
+                                        <div class="card-body p-5">
+                                            <h3 class="text-primary fw-bolder mb-4"> The Real Impact: Testimonies and Stories </h3>
+                                            <div class="row align-items-center gx-5">
+                                                <div class="col-lg-12">
+                                                    <div class="ratio ratio-16x9">
+                                                       <iframe width="476" height="267" src="https://abc7news.com/video/embed/?pid=12595100" frameborder="0" allowfullscreen></iframe>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="collapse mt-3" id="extraTestContent">
+                                            <div style="text-align:justify;">
+                                                <p>These are the links below for the testimonials:</p>
+                                                
+                                                <li>
+                                                   <a class="link-offset-2 link-underline link-underline-opacity-0 fw-bold" style="text-decoration:none;" 
+                                                   href="https://abc7news.com/earthquake-california-myshake-app-ca-warning-alert-bay-area/12594884/" target="_blank">
+                                                     MyShake app successfully warned Bay Area residents of Humboldt Co. earthquake - ABC7 San Francisco
+                                                   </a>
+                                                </li>
+                                                <li>
+                                                   <a class="link-offset-2 link-underline link-underline-opacity-0 fw-bold" style="text-decoration:none;" 
+                                                    href="https://www.scientificamerican.com/article/who-will-pay-for-an-earthquake-warning-system-on-the-west-coast/" target="_blank">
+                                                     Who Will Pay for an Earthquake Warning System on the West Coast? - Scientific American  
+                                                   </a>
+                                                </li>
+                                                <li>
+                                                   <a class="link-offset-2 link-underline link-underline-opacity-0 fw-bold" style="text-decoration:none;" 
+                                                    href="https://www.ucl.ac.uk/news/2022/feb/earthquake-early-warning-system-could-save-lives-southern-europe" target="_blank">
+                                                    Earthquake early warning system could save lives in southern Europe | UCL News - UCL – University College London  
+                                                   </a>
+                                                </li>
+
+                                            </div>
+                                        </div>
+                                        <a class="btn btn-primary mt-5 collapsed"
+                                                            data-bs-toggle="collapse" href="#extraTestContent" role="button" aria-expanded="false" aria-controls="extraContent" id="toggleBtn">
+                                        </a>
+                                        </div>
+                                        
+                                    </div>
+                                
+                                </section>
+                                <!-- the real impact end -->
+                                <!-- conclusion -->
+                                <section>
+                                    <div class="d-flex align-items-center justify-content-between mb-4">
+                                        <h2 class="text-secondary fw-bolder mb-0">Conclusion and Call to Action</h2>
+                                    </div>
+                                    <div class="container-card">
+                                        <!-- <div class="fixed-info">
+                                            <a class="btn btn-primary info-content"
+                                            target="_blank"
+                                             href="https://science.howstuffworks.com/environmental/energy/energy-hurricane-volcano-earthquake3.htm#:~:text=A%20magnitude%204.0%20earthquake%20is,tons%2C%208.0%20is%206%2C270%2C000%20tons%2C">Learn more</a>
+                                        </div>  -->
+                                        <div class="card shadow border-0 rounded-4 mb-5">
+                                            <div class="card-body p-5">
+                                                <div class="col text-center text-lg-start mb-8 mb-lg-0">
+                                                        
+                                                        <div style="text-align: justify;">
+                                                                <p>
+                                                                    <strong class="fs-5">A</strong>s we've journeyed through the seismic tale of our planet, we've not only unearthed the sheer power and majesty of earthquakes but also our own innate capacity for resilience, innovation, and collective action. We've seen how the
+                                                                     Earth's dynamic nature shapes our world and how our relentless human spirit strives to adapt, prepare, and mitigate. 
+                                                                </p>                                                                
+                                                                <p>Imagine Earth as a giant jigsaw puzzle, with tectonic plates serving as its puzzle pieces. These massive plates, ranging from the Pacific Plate to the African Plate,
+                                                                     collectively form Earth's surface. It's along their edges, where they interact and collide, that seismic drama unfolds </p>
+                                                                <p>
+                                                                    Now, more than ever, it's imperative that we
+                                                                    come together—scientists, policymakers, communities,
+                                                                     and individuals—to champion further research, support the implementation and refinement of early warning systems, and advocate for earthquake education and preparedness in vulnerable regions. While we may never fully tame the unpredictable power of the Earth, we can certainly arm ourselves with knowledge, readiness, and the collective will to face whatever challenges lie ahead.
+                                                                </p>
+
+                                                                <div class="collapse" id="extraTectonicContent">
+                                                                    <p>
+                                                                        Let us not just be passive observers of the Earth's seismic dance. Instead, let us actively participate, contribute to the ongoing dialogue, and invest in a safer, more informed future. Because, as we've seen, when we act as one, we not only better understand the stories etched beneath our feet, but we also become authors of our own tales of resilience and hope. 
+                                                                    </p>
+                                                                </div>
+                                                                <a class="btn btn-primary mt-4 collapsed"
+                                                                data-bs-toggle="collapse" href="#extraTectonicContent" role="button" aria-expanded="false" aria-controls="extraContent" id="toggleBtn">
+                                                                </a>
+                                                            </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <!-- conclusion end -->
+
+                                <section>
+                                    <div class="d-flex align-items-center justify-content-between mb-4">
+                                        <h2 class="text-primary fw-bolder mb-0">More Informations</h2>
+                                    </div>
+                                    <div class="card shadow border-0 rounded-4 mb-5">
+                                        <div class="row align-items-center gx-5">
+                                                <div class="col-lg-6">
+                                                    <div class="card-body p-5">
+                                                        <div class="card" style="width: 18rem;">
+                                                            <div class="card-body">
+                                                                <h4 class="card-title">Earthquake dataset</h4>
+                                                                <h6 class="card-subtitle mb-2 text-muted">usgs earthquake data</h6>
+                                                                <p class="card-text" style="text-align: justify;">We have managed to discover the dataset from usgs earthquake catalog. 
+                                                                    Please feel free to download and use it in our github repo for ICT605.</p>
+                                                                <a href="https://earthquake.usgs.gov/earthquakes/search/" target="_blank" class="card-link">USGS earthquake catalog</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="card-body p-5">
+                                                        <div class="card" style="width: 18rem;">
+                                                            <div class="card-body">
+                                                                <h4 class="card-title">Documentations</h4>
+                                                                <h6 class="card-subtitle mb-2 text-muted">Assignment documents</h6>
+                                                                <p class="card-text" style="text-align: justify;">Please feel free to click the link below to download our Assignment document and Powerpoint for this assignment </p>
+                                                                <a href="documents/ICT605_MajorAssignP1_NorP_34549622.docx" target="_blank" download class="card-link">Download word document</a>
+                                                                <br>
+                                                                <a href="documents/ICT605_Assignment_Presentation.pptx" target="_blank" download class="card-link m-0">Download powerpoint document</a>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                        <div class="row align-items-center gx-5">
+                                              <div class="col-lg-6">
+                                                    <div class="card-body p-5 pt-1">
+                                                        <div class="card" style="width: 18rem;">
+                                                            <div class="card-body">
+                                                                <h4 class="card-title">Github Repository</h4>
+                                                                <h6 class="card-subtitle mb-2 text-muted">Github repo for ICT605</h6>
+                                                                <p class="card-text" style="text-align: justify;">Please feel free to see our work for this assignment on github
+                                                                you can clone and use repo for more exiting storytelling and visualizations. Note: Please make sure you are on a right git branch </p>
+                                                                <a href="https://github.com/ManishRatnaShakya/ICT605" target="_blank" class="card-link">ICT605 Github</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                              <div class="col-lg-6">
+                                                    <div class="card-body p-5 pt-1">
+                                                        <div class="card" style="width: 18rem;">
+                                                            <div class="card-body">
+                                                                <h4 class="card-title">Contacts</h4>
+                                                                <h6 class="card-subtitle mb-2 text-muted">Collaborators</h6>
+                                                                <p class="card-text" style="text-align: justify;">Please feel free to contact any of our members. Click the avatars below to contact team members through email .</p>
+                                                                <div class="d-flex justify-content-between" style="margin-bottom: 15px;">
+                                                                <a href="mailto:34509621@student.murdoch.edu.au" style="padding: 5px; text-decoration: none;" class="bg-primary text-bg-light rounded-circle small fw-bold " 
+                                                                tabindex="0" data-bs-toggle="tooltip" title="Manish Shakya">MS</a>
+                                                                <a  href="mailto:34276634@student.murdoch.edu.au" style="padding: 5px; text-decoration: none; cursor: pointer;"
+                                                                 tabindex="0" data-bs-toggle="tooltip" title="Hachem Bennamoun"
+                                                                class="bg-secondary text-bg-light rounded-circle small fw-bold">HB</a>
+                                                                <a  href="mailto:34540966@student.murdoch.edu.au" style="padding: 5px; text-decoration: none; cursor: pointer;" 
+                                                                 tabindex="0" data-bs-toggle="tooltip" title="Poojan Sharma"
+                                                                class="bg-warning text-bg-light rounded-circle small fw-bold">PS</a>
+                                                                <a  href="mailto:34554937@student.murdoch.edu.au" style="padding: 5px; text-decoration: none; cursor: pointer;" 
+                                                                 tabindex="0" data-bs-toggle="tooltip" title="Ugyen Zangmo"
+                                                                class="bg-info text-bg-light rounded-circle small fw-bold">UZ</a>
+                                                                <a  href="mailto:34549622@student.murdoch.edu.au" style="padding: 5px; text-decoration: none; cursor: pointer;"
+                                                                 tabindex="0" data-bs-toggle="tooltip" title="Pema Norbu"
+                                                                class="bg-light text-bg-light rounded-circle small fw-bold">PN</a>
+                                                                <a  href="mailto:34543731@student.murdoch.edu.au" style="padding: 5px; text-decoration: none; cursor: pointer;" 
+                                                                 tabindex="0" data-bs-toggle="tooltip" title="YANGCHEN TSHOMO"
+                                                                class="bg-danger text-bg-light rounded-circle small fw-bold">YT</a>
+                                                                </div>
+                                                                <a href="https://www.microsoft.com/en-au/microsoft-teams/download-app" target="_blank" class="card-link">Download Teams</a>
+                                                             </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>
+
+                                </section>
+                            
+                            </div>
+                                <a href="#top" class="btn btn-primary  btn-circle ">↑</a>
+                        </div>
+                    </div>
+                    <!-- Student Content -->
+                    <div class="tab-pane fade" id="student">
+                        <div class="text-center mb-5">
+                            <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Explore earthquakes</span></h1>
+                        </div>
+                        <div class="row gx-5 justify-content-center">
+                            <div class="col-lg-11 col-xl-9 col-xxl-8">
+                                <!-- Section 1 -->
+                                <section>
+                                    <div class="d-flex align-items-center justify-content-between mb-4">
+                                        <h2 class="text-primary fw-bolder mb-0">The structure of the Earth</h2>
+                                    </div>
+                                    <div class="card shadow border-0 rounded-4 mb-5">
+                                        <div class="card-body p-5">
+                                            <div class="row align-items-center gx-5">
+                                                <div class="col-lg-4">
+                                                    <div class="text-primary fw-bolder mb-2">The Earth is made up of different layers:</div>
+                                                    <div class="small">
+                                                        <ul>
+                                                            <li>the <label class="fw-bolder">core</label> at the centre, which is mainly metal</li>
+                                                            <li>the <label class="fw-bolder">mantle</label>, which is mainly rock</li>
+                                                            <li>the <label class="fw-bolder">crust</label>, which is the part we can see</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col text-center text-lg-start mb-8 mb-lg-0">
+                                                    <div class="p-4 rounded-4">
+                                                        <img class="img-fluid" src="{{ url_for('static', filename='images/image-1-old.png')}}">
+                                                    </div>
+                                                </div>
+                                            </div>
+        
+                                            <div class="row align-items-center gx-5">
+                                                <div class="col text-center text-lg-start mb-8 mb-lg-0">
+                                                    <div class="p-4 rounded-4">
+                                                        <img class="img-fluid" src="{{ url_for('static', filename='images/image-2-old.png')}}">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <div class="small" style="text-align: justify;">
+                                                        The crust is composed of many parts known as <label class="fw-bolder">Tectonic Plates</label>, together with the uppermost layer of the mantle. These plates fit together like a jigsaw puzzle and are moving in various directions and at various speeds at a rate of a few centimeters per year.
+                                                    </div>
+                                                </div>
+                                            </div>
+        
+                                            <div class="row align-items-center gx-5">
+                                                <div class="col-lg-4">
+                                                    <div class="small">
+                                                        <div>Some plates collide into one other, while others slide past each other or move apart.</div>
+                                                        <div>When they collide, these plates can occasionally lock together. A fault line or plate boundary is what this is.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col text-center text-lg-start mb-8 mb-lg-0">
+                                                    <div class="p-4 rounded-4">
+                                                        <img class="img-fluid" src="{{ url_for('static', filename='images/image-3-old.png')}}">
+                                                    </div>
+                                                </div>
+                                            </div>
+        
+                                        </div>
+                                    </div>
+                                </section>
+        
+                                <!-- Section 2 -->
+                                <section>
+                                    <h2 class="text-secondary fw-bolder mb-4">What happens during an earthquake?</h2>
+                                    <div class="card shadow border-0 rounded-4 mb-5">
+                                        <div class="card-body p-5">
+                                            <div class="row align-items-center gx-5">
+                                                <div class="col-lg-4">
+                                                    <div class="small">
+                                                        <ul>
+                                                            <li>
+                                                                As plates move in different directions over long periods of time, <label class="fw-bolder">friction</label> causes <label class="fw-bolder">energy</label> to build up.
+                                                            </li>
+                                                            <li>
+                                                                It becomes so great that the energy is <label class="fw-bolder">released</label>, which creates a shock wave - an <label class="fw-bolder">earthquake</label>. 
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col text-center text-lg-start mb-8 mb-lg-0">
+                                                    <div class="p-4 rounded-4">
+                                                        <img class="img-fluid" src="{{ url_for('static', filename='images/image-4-old.png')}}">
+                                                    </div>
+                                                </div>
+                                            </div>
+        
+                                            <div class="row align-items-center gx-5">
+                                                <div class="col text-center text-lg-start mb-8 mb-lg-0">
+                                                    <div class="p-4 rounded-4">
+                                                        <img class="img-fluid" src="{{ url_for('static', filename='images/image-5-old.jpg')}}">
+                                                        <label class="small"><i>Tsunami and earthquake destruction in Japan in 2011</i></label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <div class="small">
+                                                        <ul>
+                                                            <li>
+                                                                If an earthquake is beneath the ocean it can create a series of huge waves, called <label class="fw-bolder">tsunami</label>.
+                                                            </li>
+                                                            <li>
+                                                                There are thousands of earthquakes across the world each day. 
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <!-- Earthquake Video -->
+                                    <div class="card shadow border-0 rounded-4 mb-5">
+                                        <div class="card-body p-5">
+                                            <h3 class="text-primary fw-bolder mb-4">Watch: How do earthquakes work?</h3>
+                                            <div class="row align-items-center gx-5">
+                                                <div class="col-lg-12">
+                                                    <div class="ratio ratio-16x9">
+                                                        <!-- <iframe src="https://www.youtube.com/embed/vlDzYIIOYmM" title="YouTube video" allowfullscreen></iframe> -->
+                                                        <iframe width="930" height="523" src="https://www.youtube.com/embed/17kBVfGjI8c" title="Earthquakes explained (explainity® explainer video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </section>
+
+                                <section>
+                                    <h2 class="text-secondary fw-bolder mb-4">Earthquake scale and impacts</h2>
+                                    <div class="card shadow border-0 rounded-4 mb-5">
+                                        <div class="card-body p-5">
+                                            <div class="row align-items-center gx-5">
+                                                <div class="col-lg-7">
+                                                    <div class="small">
+                                                        <ul>
+                                                            <li>Some earthquakes are so small that only <label class="fw-bolder">specialized technology</label> can detect them. Others have the intensity to completely <label class="fw-bolder">demolish towns and cities</label>.</li>
+                                                            <li>To measure an earthquake's size, one uses the <label class="fw-bolder">Richter magnitude scale</label>. The probability that an earthquake would actually inflict damage increases as the number increases.</li>
+                                                            <li>The largest earthquake ever recorded in the world happened in May 22, 1960, off the coast of Southern Chile, and measured 9.5 on the Richter scale.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col text-center text-lg-start mb-5 mb-lg-0">
+                                                    <div class="p-4 rounded-4">
+                                                        <img class="img-fluid" src="{{ url_for('static', filename='images/image-7-old.jpg')}}">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row align-items-center gx-5">
+                                                <table class="table table-striped table-bordered">
+                                                    <thead>
+                                                        <tr>
+                                                          <th scope="col">Number on Richter scale</th>
+                                                          <th scope="col">How many happen in the world per year?</th>
+                                                          <th scope="col">What does it mean?</th>
+                                                        </tr>
+                                                      </thead>
+                                                      <tbody>
+                                                        <tr>
+                                                            <td>2.5 or less</td>
+                                                            <td>Millions each year</td>
+                                                            <td>Usually not felt, but some can be recorded by scientists</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2.5 to 5.4</td>
+                                                            <td>500,000 per year</td>
+                                                            <td>Often felt, but only causes minor damage</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>5.5 to 6.0</td>
+                                                            <td>1,000 per year</td>
+                                                            <td>Can cause slight damage to buildings and other structures</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>6.1 to 6.9</td>
+                                                            <td>100 per year</td>
+                                                            <td>May cause a lot of damage in very populated areas</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>7.0 to 7.9</td>
+                                                            <td>10-15 per year</td>
+                                                            <td>Major earthquake and serious damage caused</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>8.0 or greater</td>
+                                                            <td>Once every year or two</td>
+                                                            <td>This is a very large earthquake which can totally destroy large areas</td>
+                                                        </tr>
+                                                      </tbody>
+                                                </table>
+                                                <label class="small"><i>Source: USGS</i></label>
+                                            </div>
+                                            <div class="row align-items-center gx-5">
+                                                <div class="col text-center text-lg-start mb-6 mb-lg-0">
+                                                    <div class="p-4 rounded-4">
+                                                        <img class="img-fluid" src="{{ url_for('static', filename='images/image-8-old.png')}}">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="small">
+                                                        <ul>
+                                                            <li>Many earthquakes occur around the <label class="fw-bolder">Pacific Ocean.</label> People who live there, in countries such as Japan, are used to earthquakes happening and build <label class="fw-bolder">earthquake resistant buildings</label> that sway with the shock waves rather than fall down.</li>
+                                                            <li>Although there are earthquakes in the Australia, they are rare and so small that most people do not feel them.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+        
+                                <!-- Section 3 -->
+                                <section>
+                                    <h2 class="text-primary fw-bolder mb-4">Activity: Quiz - Earthquakes</h2>
+                                    <div class="card shadow border-0 rounded-4 mb-5">
+                                        <div id="quiz-cover">
+                                            <div class="card-body p-5">
+                                                <div class="row align-items-center gx-5">
+                                                    <div class="small">
+                                                        <h4 class="text-primary fw-bolder mb-4">How much do you know about earthquakes?</h4>
+                                                        <div class="fw-bolder mb-4">Test your knowledge in this quiz.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="row align-items-center gx-5">
+                                                    <div class="col-lg-12">
+                                                        <img class="img-fluid" src="{{ url_for('static', filename='images/image-6-old.png')}}">
+                                                    </div>
+                                                </div>
+                                                <div class="row align-items-center gx-5">
+                                                    <button type="button" id="start-quiz" class="btn btn-block btn-primary">Start</button>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div id="quiz-container" class="container mt-5" style="display: none;">
+                                            <div class="p-5 rounded">
+                                              <!-- Question 1 -->
+                                              <div class="question mb-4" id="question1">
+                                                <p class="fw-bold">1. What always happens during a strong earthquake?</p>
+                                                <div class="form-check">
+                                                  <input class="form-check-input" type="radio" name="q1" value="thegroundshakes" id="q1a">
+                                                  <label class="form-check-label" for="q1a">The ground shakes</label>
+                                                </div>
+                                                <div class="form-check">
+                                                  <input class="form-check-input" type="radio" name="q1" value="theearthscoreshakes" id="q1b">
+                                                  <label class="form-check-label" for="q1b">The Earth's core shakes</label>
+                                                </div>
+                                                <div class="form-check">
+                                                  <input class="form-check-input" type="radio" name="q1" value="thereislava" id="q1c">
+                                                  <label class="form-check-label" for="q1c">There is lava</label>
+                                                </div>
+                                              </div>
+                                              <div class="question mb-4" id="question2">
+                                                <p class="fw-bold">2. Where can earthquakes happen?</p>
+                                                <div class="form-check">
+                                                  <input class="form-check-input" type="radio" name="q2" value="onlandandunderthesea" id="q1a">
+                                                  <label class="form-check-label" for="q1a">On land and under the sea</label>
+                                                </div>
+                                                <div class="form-check">
+                                                  <input class="form-check-input" type="radio" name="q2" value="onlyonland" id="q1b">
+                                                  <label class="form-check-label" for="q1b">Only on land</label>
+                                                </div>
+                                                <div class="form-check">
+                                                  <input class="form-check-input" type="radio" name="q2" value="onlyunderthesea" id="q1c">
+                                                  <label class="form-check-label" for="q1c">Only under the sea</label>
+                                                </div>
+                                              </div>
+                                              <div class="question mb-4" id="question3">
+                                                <p class="fw-bold">3. Where is the most likely place to experience a strong earthquake?</p>
+                                                <div class="form-check">
+                                                  <input class="form-check-input" type="radio" name="q3" value="atthenorthandsouthpoles" id="q1a">
+                                                  <label class="form-check-label" for="q1a">At the north and south poles</label>
+                                                </div>
+                                                <div class="form-check">
+                                                  <input class="form-check-input" type="radio" name="q3" value="infrance" id="q1b">
+                                                  <label class="form-check-label" for="q1b">In France</label>
+                                                </div>
+                                                <div class="form-check">
+                                                  <input class="form-check-input" type="radio" name="q3" value="atatectonicplateboundary" id="q1c">
+                                                  <label class="form-check-label" for="q1c">At a tectonic plate boundary</label>
+                                                </div>
+                                              </div>
+                                              <div class="question mb-4" id="question4">
+                                                <p class="fw-bold">4. What is a good way to prevent damage from an earthquake?</p>
+                                                <div class="form-check">
+                                                  <input class="form-check-input" type="radio" name="q4" value="concretebuildings" id="q1a">
+                                                  <label class="form-check-label" for="q1a">Concrete buildings</label>
+                                                </div>
+                                                <div class="form-check">
+                                                  <input class="form-check-input" type="radio" name="q4" value="shelteringunderfurniture" id="q1b">
+                                                  <label class="form-check-label" for="q1b">Sheltering under furniture</label>
+                                                </div>
+                                                <div class="form-check">
+                                                  <input class="form-check-input" type="radio" name="q4" value="earthquakeresistantbuildings" id="q1c">
+                                                  <label class="form-check-label" for="q1c">Earthquake-resistant buildings</label>
+                                                </div>
+                                              </div>
+                                              <div class="question mb-4" id="question5">
+                                                <p class="fw-bold">5. What scale is used to measure the strength of an earthquake?</p>
+                                                <div class="form-check">
+                                                  <input class="form-check-input" type="radio" name="q5" value="Beaufort" id="q1a">
+                                                  <label class="form-check-label" for="q1a">Beaufort</label>
+                                                </div>
+                                                <div class="form-check">
+                                                  <input class="form-check-input" type="radio" name="q5" value="Kelvin" id="q1b">
+                                                  <label class="form-check-label" for="q1b">Kelvin</label>
+                                                </div>
+                                                <div class="form-check">
+                                                  <input class="form-check-input" type="radio" name="q5" value="Richter" id="q1c">
+                                                  <label class="form-check-label" for="q1c">Richter</label>
+                                                </div>
+                                              </div>
+                                              <div class="row align-items-center gx-5">
+                                                <button id="submit-quiz" class="btn btn-block btn-primary">Submit Quiz</button>
+                                                <div id="quiz-result" class="mt-3"></div>
+        
+                                                <div class="row align-items-center gx-5">
+                                                    <div class="col-lg-12" id="success" style="display: none;">
+                                                        <img class="img-fluid" src="{{ url_for('static', filename='images/congratulations.png')}}">
+                                                    </div>
+                                                    <div class="col-lg-12" id="fail" style="display: none;">
+                                                        <img class="img-fluid" src="{{ url_for('static', filename='images/try-again.png')}}">
+                                                    </div>
+                                                </div>
+        
+                                              </div>
+                                            </div>
+                                            
+                                          </div>
+                                    </div>
+        
+                                </section>
+        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- <footer class="bg-dark py-4 mt-auto">
+            <div class=" px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto"><div class="small  m-0">Copyright &copy; The Data Wizards, 2023</div></div>
+                </div>
+            </div>
+        </footer> -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
+        <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 </body>
-
 </html>
