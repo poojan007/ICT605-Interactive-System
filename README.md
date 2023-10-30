@@ -1,28 +1,47 @@
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fexamples%2Ftree%2Fmain%2Fpython%2Fflask3&demo-title=Flask%203%20%2B%20Vercel&demo-description=Use%20Flask%203%20on%20Vercel%20with%20Serverless%20Functions%20using%20the%20Python%20Runtime.&demo-url=https%3A%2F%2Fflask3-python-template.vercel.app%2F&demo-image=https://assets.vercel.com/image/upload/v1669994156/random/flask.png)
+# ICT605 (Interactive Data Visualisation and Simulations) Major Assignment 2
 
-# Flask + Vercel
+A Flask application developed as part of the major assignment 2. This repository consists of the source code for the application which has interactive data visualisation system.
 
-This example shows how to use Flask 3 on Vercel with Serverless Functions using the [Python Runtime](https://vercel.com/docs/concepts/functions/serverless-functions/runtimes/python).
-
-## Demo
-
-https://flask3-python-template.vercel.app/
-
-## How it Works
-
-This example uses the Web Server Gateway Interface (WSGI) with Flask to enable handling requests on Vercel with Serverless Functions.
-
-## Running Locally
-
+## Group Members
 ```bash
-npm i -g vercel
-vercel dev
+1. Poojan Sharma
+2. Hachem Bennamoun
+3. Manish Shakya
+4. Yangchen Tshomo
+5. Pema Norbu
+6. Ugyen Zangmo
 ```
 
-Your Flask application is now available at `http://localhost:3000`.
+## Setup
 
-## One-Click Deploy
+### 1. Environment Setup:
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
+```bash
+pip install flask
+```
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fexamples%2Ftree%2Fmain%2Fpython%2Fflask3&demo-title=Flask%203%20%2B%20Vercel&demo-description=Use%20Flask%203%20on%20Vercel%20with%20Serverless%20Functions%20using%20the%20Python%20Runtime.&demo-url=https%3A%2F%2Fflask3-python-template.vercel.app%2F&demo-image=https://assets.vercel.com/image/upload/v1669994156/random/flask.png)
+### 2. Application Structure:
+
+```bash
+/RPL-Backend
+|-- /app
+|   |-- __init__.py
+|   |-- index.py
+|   |-- utils.py
+|   |-- /static
+|   |   |-- /css
+|   |   |-- /images
+|   |   |-- /js
+|   |-- /templates
+|-- app.py
+|-- Procfile
+|-- requirements.txt
+```
+
+## Running the Application
+
+To run the application:
+
+```bash
+python app.py
+```
