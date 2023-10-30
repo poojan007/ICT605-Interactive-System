@@ -1,6 +1,5 @@
-from flask import Flask, render_template
-
-app = Flask(__name__)
+from flask import render_template
+from app import app
 
 @app.route('/')
 def home():
@@ -135,6 +134,3 @@ def regional_variations_map_6():
 # @app.template_filter('datetimeformat')
 # def datetimeformat(value):
 #     return datetime.utcfromtimestamp(value/1000).strftime('%Y-%m-%d %H:%M:%S')
-
-if __name__ == '__main__':
-    app.run(debug=True, use_reloader=True)
